@@ -1,0 +1,401 @@
+@charset "UTF-8";
+@import "./base.css";
+@import "./normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+}
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, input, button, textarea, select, p, blockquote, th, td, pre, address, li, dt, dd {
+	-webkit-text-size-adjust: none;
+}
+a {
+	color: #333;
+}
+a:hover, a:active {
+	color: #333;
+	text-decoration: none;
+}
+table {
+    width: 100%;
+}
+p, dd, td, th, li {
+	line-height: 2em;
+}
+p {
+	margin: 0 0 1.4em;
+}
+img {
+	max-width: 100%;
+	vertical-align: bottom;
+}
+.bold {
+    font-weight: bold;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+#totop {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  z-index: 10;
+  width: 60px;
+  margin: 0;
+}
+#totop a {
+	display: block;
+}
+#totop a:hover {
+  opacity: 0.7;
+}
+table {
+	width: 100%;
+}
+table th, table td {
+	color: #333;
+}
+/****************** Container *****************/
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #333;
+  font-size: 14px;
+  background: #f2f2f2;
+}
+#wrapper{
+	min-width: 1200px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+/* .container {
+	padding: 0;
+} */
+/* fcaf17 */
+#gnavi {
+	background: #087b37;
+	margin-bottom: 30px;
+}
+#gnavi ul {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#gnavi li {
+	width: 20%;
+}
+#gnavi a {
+	position: relative;
+	padding: 10px 5px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #fff;
+	transition: all 0.2s ease;
+}
+#gnavi a:hover {
+	background: #fff;
+	color: #087b37;
+}
+#gnavi a::before {
+	position: absolute;
+	content: '';
+	top: calc(50% - 10px);
+	right: 0;
+	width: 1px;
+	height: 20px;
+	background: #fff;
+}
+#gnavi ul li:last-child a::before {
+	content: none;
+}
+#mainvisual {
+	height: 400px;
+	background: url('../assets/mainvisual.jpg') center no-repeat;
+	background-size: cover;
+}
+.sidebar {
+	border: 1px solid;
+}
+.sidebar:not(:last-child) {
+	margin-bottom: 30px;
+}
+.sidebar-title {
+	margin-bottom: 0;
+	text-align: center;
+	background: #333;
+	color: #fff;
+	padding: 7px;
+	font-weight: 600;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sidebar ul {
+	padding: 7px;
+}
+.sidebar li a {
+	display: block;
+	padding: 7px;
+	text-decoration: none;
+	font-weight: 500;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.sidebar li a:hover {
+	text-decoration: underline;
+}
+.sidebar li:not(:last-child) {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+.product-tbl th, .product-tbl td {
+	text-align: center;
+	padding: 20px 10px;
+	border: 1px solid #e6e6e6;
+	font-weight: 600;
+	
+}
+.product-tbl th {
+	padding: 5px 10px;
+	color: #fff;
+	background: #087b37;
+}
+.product-tbl .sim-number a {
+	text-decoration: none;
+	color: #087b37;
+	font-size: 18px;
+	position: relative;
+}
+.product-tbl a.promotion::before {
+	content: '';
+	position: absolute;
+	background: url(../assets/icon_gift.png) center center no-repeat;
+	background-size: 100% auto;
+	width: 15px;
+    height: 15px;
+    top: -10px;
+    right: -20px;
+}
+.product-tbl .sim-number a:hover {
+	text-decoration: underline;
+}
+.product-tbl .Viettel {
+	background: url('../assets/icon_viettel.png') center center no-repeat;
+	background-size: 60px auto;
+}
+.product-tbl .Vinaphone {
+	background: url('../assets/icon_vinaphone.png') center center no-repeat;
+	background-size: 60px auto;
+}
+.product-tbl .Mobifone {
+	background: url('../assets/icon_mobifone.png') center center no-repeat;
+	background-size: 60px auto;
+}
+.product-tbl .Vietnamobile {
+	background: url('../assets/icon_vietnamobile.png') center center no-repeat;
+	background-size: 60px auto;
+}
+.product-tbl .Gmobile {
+	background: url('../assets/icon_gmobile.png') center center no-repeat;
+	background-size: 60px auto;
+}
+.product-tbl .stt, .product-tbl .product {
+	font-size: 12px;
+	font-weight: 500;
+}
+.product-tbl button {
+	font-size: 12px;
+	padding: 4px 8px;
+	font-weight: 500;
+	cursor: pointer;
+	background: #fcaf17;
+	border: 1px solid transparent;
+	color: #fff;
+	border-radius: 3px;
+	box-sizing: border-box;
+	outline: none;
+	box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+	transition: all 0.2s ease;
+}
+.product-tbl button:hover {
+	border: 1px solid #fcaf17;
+	color: #fcaf17;
+	background: #fff;
+}
+.notfound {
+	text-align: center;
+	color: #333;
+	font-weight: 700;
+	font-size: 140px;
+	line-height: 1em;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	margin-top: 60px;
+}
+.notfound span {
+	display: block;
+	font-size: 40px;
+	line-height: 1.6em;
+}
+.notfound .pagenotfound {
+	font-size: 20px;
+	font-weight: 500;
+}
+.sim-information {
+    background: #f7f7f7;
+    padding: 30px 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+.sim-information .sim-number span:last-child {
+	font-size: 28px;
+	color: #087b37;
+	font-weight: 600;
+}
+.sim-information .sim-price span:last-child {
+	font-weight: 600;
+	font-size: 22px;
+	color: #087b37;
+}
+.sim-information .sim-product span:last-child {
+	font-weight: 600;
+}
+.sim-information .label {
+	width: 80px;
+	display: inline-block;
+}
+.sim-information p {
+	font-weight: 500;
+}
+.sim-information .sim-cate {
+    display: flex;
+    align-items: center;
+}
+.sim-information .sim-cate span:last-child {
+	display: inline-block;
+	background: url('../assets/icon_viettel.png') center center no-repeat;
+	background-size: 60px auto;
+	padding: 25px 30px;
+}
+.sim-information .sim-cate.Mobifone span:last-child {
+	padding: 10px 30px;
+	background: url('../assets/icon_mobifone.png') center center no-repeat;
+	background-size: 60px auto;
+}
+.sim-information .sim-cate.Vinaphone span:last-child {
+	padding: 10px 30px;
+	background: url('../assets/icon_vinaphone.png') center center no-repeat;
+	background-size: 60px auto;
+}
+.sim-information .sim-cate.Vietnamobile span:last-child {
+	padding: 15px 30px;
+	background: url('../assets/icon_vietnamobile.png') center center no-repeat;
+	background-size: 60px auto;
+}
+.sim-information .sim-cate.Gmobile span:last-child {
+	padding: 15px 30px;
+	background: url('../assets/icon_gmobile.png') center center no-repeat;
+	background-size: 60px auto;
+}
+.sim-information .promotion-title {
+	padding-left: 30px;
+	font-weight: 700;
+	font-size: 18px;
+	text-transform: uppercase;
+	background: url('../assets/icon_gift.png') top calc(50% - 2px) left no-repeat;
+	background-size: 20px auto;
+	margin-bottom: 10px;
+}
+.sim-information .promotion-content p {
+	padding-left: 20px;
+	background: url('../assets/icon_check.png') top 8px left no-repeat;
+	background-size: 12px auto;
+	color: #087b37;
+}
+.sim-information button {
+	margin: 0 auto;
+    display: block;
+    border: 1px solid #fcaf17;
+    background: #fcaf17;
+    color: #fff;
+    padding: 15px 30px;
+    cursor: pointer;
+	font-weight: 500;
+	outline: none;
+	transition: all 0.2s ease;
+}
+.sim-information button:hover {
+	background: #fff;
+	color: #fcaf17;
+}
+.pay-box {
+	width: 100%;
+	max-width: 560px;
+	margin: 0 auto;
+	border: 1px solid #087b37;
+	padding: 30px;
+	border-radius: 10px;
+	padding-left: 160px;
+	background: #fff url('../assets/icon_vietcombank.png') top calc(50% + 30px) left 50px no-repeat;
+	background-size: 60px auto;
+	margin-bottom: 40px;
+}
+.pay-title {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
+	margin-bottom: 20px;
+}
+.pay-box p {
+	margin-bottom: 10px;
+}
+.pay-box p:last-child {
+	margin-bottom: 0;
+}
+.pay-name {
+	color: #087b37;
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 1.2em;
+	text-transform: uppercase;
+}
+.pay-bank {
+	color: #087b37;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 18px;
+}
+.pay-number, .pay-add {
+	font-style: italic;
+}
+.pay-number b {
+	font-size: 18px;
+}
+#footer {
+	margin-top: 40px;
+	border-top: 2px solid #087b37;
+}
+.copyright {
+	margin: 0;
+	background: #087b37;
+	padding: 10px;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+	letter-spacing: 0.1em;
+}
+
