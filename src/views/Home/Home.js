@@ -1,13 +1,30 @@
 import React, { Component } from 'react';
-import Product from '../../component/Product/Product';
 import Data from '../Json/Data.json';
-import Search from '../../component/Search/Search';
+import IdxProduct from '../../component/IdxProduct/IdxProduct';
 class Home extends Component {
     render() {
         return (
             <>
-                {/* <Search></Search> */}
-                <Product data={Data}></Product>
+                <div className="under-section">
+                    <p className="under-title label-sim">Tất cả sim</p>
+                    <IdxProduct data={Data}></IdxProduct>
+                    <p className="under-button"><a href="/sim/">Xem thêm</a></p>
+                </div>
+                <div className="under-section">
+                    <p className="under-title label-sim">Sim giá rẻ</p>
+                    <IdxProduct data={Data}></IdxProduct>
+                    <p className="under-button"><a href="/sim/sim-gia-re">Xem thêm</a></p>
+                </div>
+                <div className="under-section">
+                    <p className="under-title label-sim">Sim thần tài</p>
+                    <IdxProduct data={Data}></IdxProduct>
+                    <p className="under-button"><a href="/sim/sim-than-tai">Xem thêm</a></p>
+                </div>
+                <div className="under-section">
+                    <p className="under-title label-sim">Sim tứ quý</p>
+                    <IdxProduct data={Data}></IdxProduct>
+                    <p className="under-button"><a href="/sim/sim-tu-quy">Xem thêm</a></p>
+                </div>
             </>
         );
     }

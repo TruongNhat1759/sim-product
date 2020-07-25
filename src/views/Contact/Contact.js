@@ -3,13 +3,12 @@ import React, { Component } from 'react';
 class Contact extends Component {
     render() {
         return (
-            <main id="main">
-                <div className="contact">
-                    <div className="container">
-                        concat
-                    </div>
+            <div className="under-section">
+                <p className="under-title label-sim">Contact</p>
+                <div className="under-block">
+                    Đây là trang CONTACT
                 </div>
-            </main>
+            </div>
         );
     }
 }

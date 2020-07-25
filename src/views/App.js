@@ -8,7 +8,7 @@ import Header from '../component/Header/Header';
 class App extends Component {
   render() {
     return (
-      <div className="wrapper">
+      <div id="wrapper">
         <Header></Header>
         <RouterDirect></RouterDirect>
         <Footer></Footer>
